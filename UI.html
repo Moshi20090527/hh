@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>個人介紹</title>
+  <style>
+    /* 讓整個網頁可以一頁一頁「吸附」滑動 */
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory; /* Y 軸（垂直）強制吸附 */
+    }
+
+    body {
+      margin: 0;
+      background-color: #46A3FF;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    /* 設定每一頁都是滿畫面 (100vh 代表螢幕 100% 高度) */
+    .section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start; /* 滾動到這裡時自動吸附對齊 */
+      text-align: center;
+    }
+
+    /* 圖片等比縮小與美化 */
+    .round-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* 提示往上滑的小箭頭動畫 */
+    .scroll-hint {
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+      animation: bounce 1.5s infinite; /* 讓箭頭上下跳動 */
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 第一頁：迎賓解鎖畫面 -->
+  <div class="section">
+    <img class="round-img" src="Html/15802b1dc272e2bf9bfdecc3e7124a7c.webp.jpg" alt="頭像">
+    <h1>你好，我是 [你的名字]</h1>
+    <p>歡迎來到我的個人網站</p>
+    <div class="scroll-hint">往上滑動解鎖更多內容 ⬇️</div>
+  </div>
+
+  <!-- 第二頁：內部主要內容 -->
+  <div class="section" style="background-color: #2b82d9;">
+    <h2>關於我</h2>
+    <p>這裡可以寫你的興趣、技能、或是作品集！</p>
+  </div>
+
+</body>
+</html>
