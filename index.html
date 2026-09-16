@@ -9,7 +9,15 @@
       scroll-behavior: smooth;
       scroll-snap-type: y mandatory; /* Y 軸（垂直）強制吸附 */
     }
+
     #page1 {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/Moshi20090527/hh/main/44e7132e6aeed1cb3c056cde3f8587a2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    }
+    
+    #page2 {
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/Moshi20090527/hh/main/9a2797d232dac6c89db48d788f068741.jpg');
   background-size: cover;
   background-position: center;
@@ -60,7 +68,7 @@
 <body>
 
   <!-- 第一頁：迎賓解鎖畫面 -->
-  <div class="section">
+  <div class="section" id="page1">
     <img class="round-img" src="b5c4cd75f1cb4335c503eac76c4efd73.jpg" >
     <h1>hello, I'm Leilani</h1>
     <p style="font-size:35px;">welcome to my Self-introduction</p>
@@ -68,7 +76,7 @@
   </div>
 
   <!-- 第二頁：內部主要內容 -->
-  <div class="section" id="page1">
+  <div class="section" id="page2">
     <p style="font-size:50px;">about me</p>
   </div>
 
