@@ -38,6 +38,17 @@
       box-sizing: border-box;
       text-align: left; 
     }
+
+    .card-ul {
+  padding-left: 18px;        /* 縮減點點左邊的空間，讓文字可以盡量往左貼近 */
+  margin: 15px 0 0 0;
+}
+
+   .card-li {
+  margin-bottom: 10px;       /* 行與行之間拉開距離，畫面看起來會更有氣勢、不擁擠 */
+  font-size: 15px;           /* 調整文字大小 */
+  line-height: 1.5;          /* 增加行高，提升閱讀舒服度 */
+}
       
     body {
       margin: 0;
@@ -100,7 +111,7 @@
   <div class="section page1">
     <div class="card" style="font-size:35px;">
       <p style="font-size:38px;"><b>基本資料</b></p>
-      <ul>
+      <ul class="card-ul">
         <li>姓名／暱稱:時冶/leilani</li>
         <li>年齡:17y</li>
         <li>生日:5/27</li>
