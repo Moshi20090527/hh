@@ -34,6 +34,14 @@
       height:150px;
     }
 
+    .icon3 {
+     position: absolute;
+     bottom:50%;
+     right:10%;
+      weight:100px;
+      height:150px;
+    }
+
     .grey {
      filter: brightness(0.7); /* 降低圖片明度 */
     }
@@ -110,6 +118,7 @@
     }
   </style>
 </head>
+  
 <body>
 
   <!-- 第一頁：迎賓解鎖畫面 -->
@@ -131,6 +140,7 @@
 
   <!--第三頁-->
   <div class="section page1">
+    <img class="icon3 grey" src="eyes.png" onclick="checkPassword()" style="cursor: pointer;">
     <div class="card" style="font-size:35px;">
       <p class="p" style="font-size:38px;"><b>基本資料</b></p>
       <ul class="card-ul">
@@ -172,6 +182,26 @@
         </ul>
     </div>
   </div>
+
+  <script>
+function checkPassword() {
+  // 1. 設定你想要的密碼（這裡範例設為 0527）
+  var correctPassword = "0527"; 
+  
+  // 2. 彈出輸入框讓使用者填寫
+  var userInput = prompt("password is 'birthday' 4 numbers：");
+  
+  // 3. 判斷密碼是否正確
+  if (userInput === correctPassword) {
+    alert("密碼正確！即將為您跳轉...");
+    // 密碼正確，開啟新分頁跳轉（把網址換成你要去的頁面）
+    window.open("https://hearty.me/leilani2009?first=1", "_blank");
+  } else if (userInput !== null) {
+    // 密碼錯誤（且不是按取消）
+    alert("密碼錯誤，無法進入！");
+  }
+}
+  </script>
 
 </body>
 </html>
