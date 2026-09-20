@@ -220,25 +220,25 @@
     </div>
   </div>
 
-  <script>
+<script>
 function checkPassword() {
-  // 1. 設定你想要的密碼（這裡範例設為 0527）
-  var correctPassword = "leila2009"; 
+  var correctPassword = "leila2009"; // 設定你的密碼
+  var targetUrl = "https://www.google.com"; // 設定要跳轉的網址
   
-  // 2. 彈出輸入框讓使用者填寫
-  var userInput = prompt("英文小名+出生年");
+  // 彈出密碼輸入框
+  var userInput = prompt("請輸入密碼以解鎖網頁：");
   
-  // 3. 判斷密碼是否正確
   if (userInput === correctPassword) {
     alert("密碼正確！即將為您跳轉...");
-    // 密碼正確，開啟新分頁跳轉（把網址換成你要去的頁面）
-    window.open("https://www.my-diary.org/edit/a/home", "_blank");
-  } else if (userInput !== null) {
-    // 密碼錯誤（且不是按取消）
+    
+    // 💡 關鍵修改：不改開新分頁，改用同分頁跳轉（IG 才不會封鎖）
+    window.location.href = targetUrl;
+    
+  } else if (userInput !== null && userInput !== "") {
     alert("密碼錯誤，無法進入！");
   }
 }
-  </script>
+</script>
 
 </body>
 </html>
